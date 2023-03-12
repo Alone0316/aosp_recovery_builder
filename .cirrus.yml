@@ -19,8 +19,8 @@ task:
   timeout_in: 240m  
   container:
       image: ghcr.io/alone0316/docker:arch
-      cpu: 6
-      memory: 20G
+      cpu: 8
+      memory: 32G
 
 
 
