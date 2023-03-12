@@ -20,7 +20,7 @@ task:
   container:
       image: ghcr.io/alone0316/docker:arch
       cpu: 4
-      memory: 16G
+      memory: 20G
 
 
 
