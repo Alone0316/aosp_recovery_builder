@@ -9,6 +9,8 @@ env:
     KT_LINK: https://github.com/xiaomi-mt6877/android_kernel_xiaomi_ruby.git
     PLATFORM: mt6877
     KT_PATH: kernel/$OEM/$PLATFORM
+    LOCAL_MANIFEST: https://github.com/Alone0316/local_manifest.git -B ruby
+    LOCAL_MANIFEST_PATH: .repo/local_manifests
     TARGET: bootimage
     EXTRA_CMD: export SKIP_ABI_CHECKS=true
     LUNCH_COMBO: lineage_${DEVICE}-eng
@@ -36,6 +38,7 @@ task:
       - mkdir -p ~/work
       - cd ~/work
       - repo init --depth=1 -u $MANIFEST
+      - git clone $LOCAL_MANIFEST $LOCAL_MANIFEST_PATH
       - repo sync -j4 --force-sync --no-tags --no-clone-bundle
       - git clone $DT_LINK $DT_PATH
       - git clone $VT_LINK $VT_PATH
