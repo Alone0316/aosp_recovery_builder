@@ -8,7 +8,7 @@ env:
     VT_PATH: vendor/$OEM/$DEVICE
     KT_LINK: https://github.com/xiaomi-mt6877/android_kernel_xiaomi_ruby.git
     PLATFORM: mt6877
-    KT_PATH: kernel/$OEM/$DEVICE
+    KT_PATH: kernel/$OEM/$PLATFORM
     LOCAL_MANIFEST: https://github.com/Alone0316/local_manifest.git -b ruby
     LOCAL_MANIFEST_PATH: .repo/local_manifests
     TARGET: bootimage
